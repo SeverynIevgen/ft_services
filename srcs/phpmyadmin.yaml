@@ -1,0 +1,42 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: phpmyadmin-serv
+  labels:
+    app: phpmyadmin-app
+  annotations:
+    metallb.universe.tf/address-pool: phpmyadmin
+spec:
+  type: LoadBalancer
+  selector:
+    app: phpmyadmin-app
+  ports:
+    - port      : 5000
+      targetPort: 5000
+      protocol  : TCP
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: phpmyadmin-depl
+  labels:
+    app: phpmyadmin-app
+spec:
+  replicas: 1 # tells deployment to run 1 pod matching the template
+  selector:
+    matchLabels:
+      app: phpmyadmin-app
+  template:
+    metadata:
+      labels:
+        app: phpmyadmin-app
+    spec:
+      containers:
+        - name           : phpmyadmin
+          image          : phpmyadmin
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
+...

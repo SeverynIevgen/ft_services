@@ -1,0 +1,30 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config
+  namespace: metallb-system
+data:
+  config: |
+    address-pools:
+      - name     : ftps
+        protocol : layer2
+        addresses:
+          - 192.168.99.170-192.168.99.170
+      - name     : grafana
+        protocol : layer2
+        addresses:
+          - 192.168.99.171-192.168.99.171
+      - name     : nginx
+        protocol : layer2
+        addresses:
+          - 192.168.99.172-192.168.99.172
+      - name     : phpmyadmin
+        protocol : layer2
+        addresses:
+          - 192.168.99.173-192.168.99.173
+      - name     : wordpress
+        protocol : layer2
+        addresses:
+          - 192.168.99.176-192.168.99.176
+...

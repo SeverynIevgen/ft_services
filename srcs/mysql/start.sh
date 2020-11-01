@@ -2,7 +2,7 @@
 
 rm -rf /var/cache/apk/*
 
-telegraf &
+#telegraf &
 
 ./db_init.sh &
 sed -i 's/skip-networking/#skip-networking/g' /etc/my.cnf.d/mariadb-server.cnf
@@ -10,7 +10,7 @@ sed -i 's/skip-networking/#skip-networking/g' /etc/my.cnf.d/mariadb-server.cnf
 /usr/bin/mysqld_safe --user=mysql --datadir="/var/lib/mysql"
 
 
-sleep infinity
+#sleep infinity
 #rc default
 #/etc/init.d/mariadb setup
 #rc-service mariadb start

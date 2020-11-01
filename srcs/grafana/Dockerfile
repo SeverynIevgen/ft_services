@@ -1,7 +1,7 @@
 FROM alpine:3.12.0
 
-RUN apk add --update --no-cache grafana telegraf \
-    --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
+#RUN apk add --update --no-cache telegraf --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
+RUN apk add --update --no-cache grafana --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
 RUN apk add --update --no-cache supervisor
 EXPOSE 3000
 

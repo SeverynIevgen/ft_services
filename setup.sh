@@ -15,15 +15,20 @@ eval $(minikube docker-env)
 
 echo "Building of Alpine images..."
 docker build -t nginx srcs/nginx
+#kubectl apply -f srcs/nginx.yaml
 docker build -t ftps srcs/ftps --build-arg IP=${IP}
 docker build -t mysql srcs/mysql
+#kubectl apply -f srcs/mysql.yaml
 docker build -t wordpress srcs/wordpress
+#kubectl apply -f srcs/wordpress.yaml
 docker build -t phpmyadmin srcs/phpmyadmin
+#kubectl apply -f srcs/phpmyadmin.yaml
 docker build -t influxdb srcs/influxdb
 docker build -t grafana srcs/grafana
 
 echo "Creating pods and services..."
 kubectl apply -f srcs/
+#kubectl apply -f srcs/configmap.yaml
 
 # Setup metalLB secret
 kubectl create secret generic -n metallb-system memberlist --from-literal=secretkey="$(openssl rand -base64 128)"

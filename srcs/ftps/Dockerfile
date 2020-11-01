@@ -2,8 +2,8 @@ FROM alpine:3.12.0
 
 ARG IP
 ENV IP=$IP
-RUN apk add --update --no-cache telegraf pure-ftpd \
-    --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
+#RUN apk add --update --no-cache telegraf --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
+RUN apk add --update --no-cache pure-ftpd --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
 RUN apk add --update --no-cache openssl supervisor
 EXPOSE 21 21000
 

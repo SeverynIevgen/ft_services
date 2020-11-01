@@ -25,7 +25,7 @@ openssl req		-newkey rsa:2048 \
 			-subj "/C=RU/ST=Moscow/L=Domodedovo/O=School21/OU=IT/CN=zdawnsta"
 
 # Starting of services
-rm /etc/telegraf.conf &&
+rm /etc/telegraf.conf
 #telegraf &
-#/usr/sbin/sshd && /usr/sbin/nginx -g 'daemon off;'
-/usr/bin/supervisord -c /etc/supervisord.conf
+/usr/sbin/sshd && /usr/sbin/nginx -g 'daemon off;'
+#/usr/bin/supervisord -c /etc/supervisord.conf

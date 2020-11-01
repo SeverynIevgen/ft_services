@@ -18,4 +18,5 @@ echo -e "12345\n12345" | adduser zdawnsta
 # Starting of services
 rm /etc/telegraf.conf
 #/usr/bin/supervisord -c /etc/supervisord.conf
-telegraf & /usr/sbin/pure-ftpd -p 21000:21000 -P $IP
+#telegraf & 
+/usr/sbin/pure-ftpd -p 21000:21000 -P $IP

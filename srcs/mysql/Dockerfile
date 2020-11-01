@@ -1,7 +1,7 @@
 FROM alpine:3.12.0
 
 #RUN apk add --update --no-cache telegraf --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
-RUN apk add --update --no-cache mariadb mariadb-client mysql-client wget
+RUN apk add --update --no-cache mariadb mariadb-client mysql-client wget supervisor
 EXPOSE 3306
 
 RUN wget https://dl.influxdata.com/telegraf/releases/telegraf-1.16.1_static_linux_amd64.tar.gz

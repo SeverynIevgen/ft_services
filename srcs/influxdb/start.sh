@@ -14,8 +14,8 @@ echo "CREATE DATABASE telegraf" | influx
 echo "CREATE USER zdawnsta WITH PASSWORD '12345' WITH ALL PRIVILEGES" | influx
 
 # Starting of telegraf
-#/usr/bin/supervisord -c /etc/supervisord.conf
-telegraf &
+/usr/bin/supervisord -c /etc/supervisord.conf
+#telegraf &
 
 # Avoiding container to stop
-sleep infinity
+#sleep infinity

@@ -18,6 +18,5 @@ RUN mv telegraf-1.16.1/var/log/telegraf var/log/telegraf
 COPY telegraf.conf /etc/telegraf/
 COPY supervisord.conf /etc/supervisord.conf
 COPY start.sh ./
-# RUN rm -f telegraf.conf start.sh
 
 ENTRYPOINT ["/bin/sh", "start.sh"]

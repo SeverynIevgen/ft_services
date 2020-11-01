@@ -12,8 +12,8 @@ spec:
   selector:
     app: ftps-app
   ports:
-    #- port : 20
-      #name : ftps-data
+    - port : 20
+      name : ftps-data
     - port : 21
       name : ftps-conn
     - port : 21000
@@ -41,7 +41,7 @@ spec:
           image          : ftps
           imagePullPolicy: Never
           ports:
-            #- containerPort: 20
+            - containerPort: 20
             - containerPort: 21
             - containerPort: 21000
 ...

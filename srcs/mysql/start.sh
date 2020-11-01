@@ -2,7 +2,7 @@
 
 rm -rf /var/cache/apk/*
 
-#telegraf &
+telegraf &
 
 ./db_init.sh &
 sed -i 's/skip-networking/#skip-networking/g' /etc/my.cnf.d/mariadb-server.cnf

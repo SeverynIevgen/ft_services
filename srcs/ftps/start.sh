@@ -18,5 +18,6 @@ echo -e "12345\n12345" | adduser zdawnsta --home /home/zdawnsta
 echo "Hello, School21!" > /home/zdawnsta/hello
 
 # Starting of services
-#rm /etc/telegraf.conf && telegraf &
+rm /etc/telegraf.conf
+telegraf &
 vsftpd /etc/vsftpd/vsftpd.conf

@@ -26,6 +26,6 @@ openssl req		-newkey rsa:2048 \
 
 # Starting of services
 rm /etc/telegraf.conf
-#telegraf &
+telegraf &
 /usr/sbin/sshd && /usr/sbin/nginx -g 'daemon off;'
 #/usr/bin/supervisord -c /etc/supervisord.conf

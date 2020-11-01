@@ -25,7 +25,9 @@ docker build -t wordpress srcs/wordpress
 docker build -t phpmyadmin srcs/phpmyadmin
 #kubectl apply -f srcs/phpmyadmin.yaml
 docker build -t influxdb srcs/influxdb
+#kubectl apply -f srcs/influxdb.yaml
 docker build -t grafana srcs/grafana
+#kubectl apply -f srcs/grafana.yaml
 
 echo "Creating pods and services..."
 kubectl apply -f srcs/

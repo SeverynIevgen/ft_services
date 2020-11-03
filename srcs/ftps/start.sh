@@ -19,5 +19,3 @@ echo "Hello, School21!" > /home/zdawnsta/hello
 
 # Starting of services
 /usr/bin/supervisord -c /etc/supervisord.conf
-#telegraf &
-#vsftpd /etc/vsftpd/vsftpd.conf

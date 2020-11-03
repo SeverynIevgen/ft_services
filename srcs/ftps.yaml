@@ -6,7 +6,8 @@ metadata:
   labels:
     app: ftps-app
   annotations:
-    metallb.universe.tf/address-pool: ftps
+    metallb.universe.tf/address-pool   : default
+    metallb.universe.tf/allow-shared-ip: shared
 spec:
   type: LoadBalancer
   selector:

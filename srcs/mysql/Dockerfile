@@ -16,6 +16,7 @@ RUN chmod +x usr/lib/telegraf/scripts/telegraf.service
 RUN mv telegraf-1.16.1/var/log/telegraf var/log/telegraf
 
 COPY telegraf.conf /etc/telegraf/
+COPY supervisord.conf /etc/supervisord.conf
 COPY start.sh ./
 COPY db_init.sh ./
 RUN chmod +x db_init.sh

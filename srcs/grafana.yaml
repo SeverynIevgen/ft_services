@@ -6,7 +6,8 @@ metadata:
   labels:
     app: grafana-app
   annotations:
-    metallb.universe.tf/address-pool: grafana
+    metallb.universe.tf/address-pool   : default
+    metallb.universe.tf/allow-shared-ip: shared
 spec:
   type: LoadBalancer
   selector:

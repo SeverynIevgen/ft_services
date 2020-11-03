@@ -6,7 +6,8 @@ metadata:
   labels:
     app: wordpress-app
   annotations:
-    metallb.universe.tf/address-pool: wordpress
+    metallb.universe.tf/address-pool   : wordpress
+    metallb.universe.tf/allow-shared-ip: shared
 spec:
   type: LoadBalancer
   selector:
